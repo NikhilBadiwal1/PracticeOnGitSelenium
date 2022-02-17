@@ -28,13 +28,13 @@ public class HomePageTest {
 		driver.manage().window().maximize();
 		driver.get("https://www.carwale.com/");
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-		/*HomePage home=new HomePage(driver);
+		HomePage home=new HomePage(driver);
 		NewCarPage carpage=home.findNewCar();
 		
 		//NewCarPage carpage=new NewCarPage(driver);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-		carpage.gotoBMW();*/
+		carpage.gotoBMW();
 		
-		new HomePage(driver).findNewCar().gotoBMW();
+		//new HomePage(driver).findNewCar().gotoBMW();
 	}
 }
