@@ -1,0 +1,40 @@
+package testcases;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.PageFactory;
+
+import java.time.Duration;
+
+import Pages.HomePage;
+import Pages.NewCarPage;
+
+public class HomePageTest {
+
+	public static WebDriver driver;
+	public static void main(String[] args) {
+		
+		Map<String, Object> prefs=new HashMap<String, Object>();
+		prefs.put("profile.default_content_setting_values.notifications", 2);
+		ChromeOptions options = new ChromeOptions();
+		options.setExperimentalOption("prefs", prefs);
+		
+		System.setProperty("webdriver.chrome.driver", "E:\\ChromeDriver\\chromedriver.exe");
+		driver=new ChromeDriver(options);
+		driver.manage().window().maximize();
+		driver.get("https://www.carwale.com/");
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		/*HomePage home=new HomePage(driver);
+		NewCarPage carpage=home.findNewCar();
+		
+		//NewCarPage carpage=new NewCarPage(driver);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		carpage.gotoBMW();*/
+		
+		new HomePage(driver).findNewCar().gotoBMW();
+	}
+}
