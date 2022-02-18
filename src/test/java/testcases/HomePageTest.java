@@ -25,10 +25,11 @@ public class HomePageTest {
 		ChromeOptions options = new ChromeOptions();
 		options.setExperimentalOption("prefs", prefs);
 		
-		System.setProperty("webdriver.chrome.driver", "E:\\ChromeDriver\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "E:/ChromeDriver/chromedriver.exe");
 		driver=new ChromeDriver(options);
 		driver.manage().window().maximize();
 		driver.get("https://www.carwale.com/");
+		System.out.println(driver.getCurrentUrl());
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		/*HomePage home=new HomePage(driver);
 		NewCarPage carpage=home.findNewCar();
