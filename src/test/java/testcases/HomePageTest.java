@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.Test;
 
 import java.time.Duration;
 
@@ -16,7 +17,8 @@ import Pages.NewCarPage;
 public class HomePageTest {
 
 	public static WebDriver driver;
-	public static void main(String[] args) {
+	@Test
+	public void testIt() {
 		
 		Map<String, Object> prefs=new HashMap<String, Object>();
 		prefs.put("profile.default_content_setting_values.notifications", 2);
