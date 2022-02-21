@@ -31,13 +31,19 @@ public class HomePageTest {
 		driver.get("https://www.carwale.com/");
 		System.out.println(driver.getCurrentUrl());
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-		/*HomePage home=new HomePage(driver);
+		HomePage home=new HomePage(driver);
 		NewCarPage carpage=home.findNewCar();
 		
 		//NewCarPage carpage=new NewCarPage(driver);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+<<<<<<< HEAD
+		carpage.gotoBMW();
+		//changes checked 
+		//new HomePage(driver).findNewCar().gotoBMW();
+=======
 		carpage.gotoBMW();*/
 		//added git practice //added it for nikhil_gittest branch//new code
 		new HomePage(driver).findNewCar().gotoBMW();
+>>>>>>> 7cce5746e7ac3c222a08cb8b788f6a1344369be5
 	}
 }
