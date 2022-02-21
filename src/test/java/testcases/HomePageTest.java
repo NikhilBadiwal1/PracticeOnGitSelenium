@@ -37,7 +37,7 @@ public class HomePageTest {
 		//NewCarPage carpage=new NewCarPage(driver);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		carpage.gotoBMW();*/
-		//added git practice
+		//added git practice //added it for nikhil_gittest branch//new code
 		new HomePage(driver).findNewCar().gotoBMW();
 	}
 }
