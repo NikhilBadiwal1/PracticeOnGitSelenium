@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
@@ -25,7 +26,7 @@ public class HomePageTest {
 		ChromeOptions options = new ChromeOptions();
 		options.setExperimentalOption("prefs", prefs);
 		
-		System.setProperty("webdriver.chrome.driver", "E:/ChromeDriver/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "E:\\selenium\\chromedriver_win32\\chromedriver.exe");
 		driver=new ChromeDriver(options);
 		driver.manage().window().maximize();
 		driver.get("https://www.carwale.com/");
@@ -39,5 +40,14 @@ public class HomePageTest {
 		carpage.gotoBMW();*/
 		//added git practice //added it for nikhil_gittest branch//new code
 		new HomePage(driver).findNewCar().gotoBMW();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+	}
+	@AfterSuite
+	public void tearDown()
+	{
+		if(driver!=null)
+		{
+			driver.quit();
+		}
 	}
 }
