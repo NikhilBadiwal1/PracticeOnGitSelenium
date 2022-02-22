@@ -40,6 +40,6 @@ public class NewCarPage extends BasePage {
 	{
 		BMWLink.click();
 		return new BMWCarPage(driver);
-		
+		//modified new car page
 	}
 }
