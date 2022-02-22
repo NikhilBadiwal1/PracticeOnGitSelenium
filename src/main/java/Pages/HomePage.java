@@ -18,7 +18,7 @@ public class HomePage extends BasePage{
 	}
 
 	
-	
+	//test in home page .java
 	
 	@FindBy(xpath="//div[contains(text(),'NEW CARS')]")
 	WebElement NewCars;
